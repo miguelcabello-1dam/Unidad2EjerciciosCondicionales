@@ -13,20 +13,25 @@ public class Ejercicio6 {
 		int mes;
 		// variable donde se almacena el año como int
 		int año;
+		int dias;
 		
-		/*System.out.println("Cuantos kilometros vas a recorrer? ");
-		km = sc.nextInt();
+		System.out.println("Introduce el mes: ");
+		mes = sc.nextInt();
 		
-		System.out.println("De cuantos dias sera tu estancia? ");
-		dias = sc.nextInt();
+		System.out.println("Introduce el año: ");
+		año = sc.nextInt();
 		
-		precio = km * PRECIO_KM;
-		
-		if (dias > DIAS_REBAJA && km > KM_REBAJA) {
-			precio = precio - precio * REBAJA / 100;
+		if (año % 4 == 0 && mes == 2) {
+			dias = 31;
+		} else {
+			switch (mes) {
+				case 1, 3, 5, 7, 8, 10, 12 -> { dias = 31; }
+				case 2 -> { dias = 28; }
+				default -> { dias = 30; }
+			}
 		}
 		
-		System.out.println("El precio del billete es de: " + precio + "€");*/
+		System.out.println("El mes tiene " + dias + " dias");
 		
 		// se cierra el scanner
 		sc.close();
